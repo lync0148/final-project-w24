@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: poppins, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1200px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    text-align: right;
+    margin: 10px;
+    font-size: 1.802rem;
+}
+
+.icecream {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr;
+    
+    grid-template-areas: 
+    "pic1 pic1 pic1"
+    "pic2 pic3 pic4"
+    ;
+}
+
+.icecream .pic:nth-child(1) {
+    gird-area: pic1;
+}
+.icecream .pic:nth-child(2) {
+    gird-area: pic4;
+}
+.icecream .pic:nth-child(3) {
+    gird-area: pic3;
+}
+.icecream .pic:nth-child(4) {
+    gird-area: pic4;
+}
