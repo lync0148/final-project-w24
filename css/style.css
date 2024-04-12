@@ -37,6 +37,10 @@ nav ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr 1fr;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+    border-radius: 25px;
     
     grid-template-areas: 
     "pic1 pic1 pic1"
@@ -45,14 +49,16 @@ nav ul {
 }
 
 .icecream .pic:nth-child(1) {
-    gird-area: pic1;
+    grid-area: pic1;
 }
 .icecream .pic:nth-child(2) {
-    gird-area: pic4;
+    grid-area: pic2;
 }
 .icecream .pic:nth-child(3) {
-    gird-area: pic3;
+    grid-area: pic3;
 }
 .icecream .pic:nth-child(4) {
-    gird-area: pic4;
+    grid-area: pic4;
 }
+
+.wrapper .
