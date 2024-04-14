@@ -7,9 +7,23 @@ body {
     line-height: 1.4;
     margin: 0;
 }
-
 img {
     width: 100%;
+}
+.hero {
+    width: 25%;
+}
+h1 {
+    font-size: 2.027rem;
+    font-weight: 600;
+}
+h2 {
+    font-size: 1.802rem;
+}
+h3 {
+    font-size: 1.266rem;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .wrapper {
@@ -24,6 +38,7 @@ img {
 nav {
     margin-left: 20px;
     text-decoration: none;
+    text-align: right;
 }
 
 nav ul {
@@ -37,11 +52,16 @@ nav ul {
     color: #000;
 }
 
+nav ul li {
+    text-align: right;
+}
+
 a:link {
     text-decoration: none;
     color: #000;
     padding: 10px;
     color: inherit;
+    text-align: right;
 }
 
 .icecream {
@@ -51,7 +71,7 @@ a:link {
     padding: 20px;
     margin: 20px;
     gap: 20px;
-    border-radius: 10px;
+    
     
     grid-template-areas: 
     "pic1 pic1 pic1"
@@ -61,15 +81,19 @@ a:link {
 
 .icecream .pic:nth-child(1) {
     grid-area: pic1;
+    border-radius: 25px;
 }
 .icecream .pic:nth-child(2) {
     grid-area: pic2;
+    border-radius: 25px;
 }
 .icecream .pic:nth-child(3) {
     grid-area: pic3;
+    border-radius: 25px;
 }
 .icecream .pic:nth-child(4) {
     grid-area: pic4;
+    border-radius: 25px;
 }
 
 .sweetheartsaffair {
@@ -82,35 +106,82 @@ a:link {
     color: #fff;
     text-decoration: none;
     margin: 30px, 60px;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 .behind-the-dough {
     background-color: #f8fafc;
     padding: 20px;
-    text-align: center;
+    border: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 .testimonials {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
 
 }
 
 
 .products {
+    text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .pic:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .pic:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        
+        .pic:nth-child(3) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .pic:nth-child(4) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
 }
-
-
-
-
-
-
-
-
-
+.dough {
+    border-radius: 10px;
+}
+.ride-or-die {
+    background-color: #f8fafc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+.brownie-beast {
+    background-color: #f8fafc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+.cookie-monsta {
+    background-color: #f8fafc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+.smores {
+    background-color: #f8fafc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
 
 
 footer {
@@ -121,3 +192,84 @@ footer {
     
     
 }
+
+
+@media screen and (min-width: 768px) {
+    img {
+        width: 100%;
+    }
+    .hero {
+        width: 25%;
+    }
+    nav ul li {
+        text-align: right;
+    }
+    .icecream {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .pic:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .pic:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        
+        .pic:nth-child(3) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .pic:nth-child(4) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+         }
+   .testimonials {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto auto;
+    justify-items: center;
+    gap: 10px;
+  }
+  .ride-or-die {
+    width: 100%;
+  }
+  .brownie-beast {
+    width: 100%;
+  }
+  .cookie-monsta {
+    width: 100%;
+  }
+  .smores {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+    img {
+        width: 100%;
+    }
+    .hero {
+        padding-left: 10px;
+        width: 20%;
+    }
+    .icecream {
+        width: 50%;
+        gap: 10px;
+        border-radius: 0px;
+    }
+    nav ul li {
+        text-align: right;
+    }
+
